@@ -116,11 +116,11 @@
   <p [text]="bar">Should read "123" after tapping button below.</p>
   <button on="tap: AMP.setState({})">setState()</button>
   <amp-script width=300 height=80 script="bind">
-    <pre>AMP.setState({bar: 123})</pre>
+    <pre>AMP.setState({"bar": 123})</pre>
     <pre>Prints AMP.getState('foo')</pre>
   </amp-script>
   <script type="text/plain" target="amp-script" id="bind">
-    AMP.setState({bar: 123});
+    AMP.setState({"bar": 123});
 
     AMP.getState('foo').then(state => console.log(state));
   </script>
